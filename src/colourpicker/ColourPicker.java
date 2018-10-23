@@ -21,7 +21,7 @@ import javafx.scene.input.KeyEvent;
 
 
 /**
- *
+ * Reads the JSON provided by the server program, and displays them in a JavaFX program.
  * @author J380446
  */
 public class ColourPicker extends Application {

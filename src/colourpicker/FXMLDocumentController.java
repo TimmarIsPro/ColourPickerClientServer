@@ -56,6 +56,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private AnchorPane window;
     
+    //On click of an entry in the listview, displays the relevant information.
     @FXML
     private void handleMouseClick(MouseEvent event) {
         colorName.setText(listColor[colorList.getSelectionModel().getSelectedIndex()].getString("name"));
@@ -64,6 +65,8 @@ public class FXMLDocumentController implements Initializable {
         colorDisp.setFill(Color.web(listColor[colorList.getSelectionModel().getSelectedIndex()].getString("hex")));
     }
     
+    
+    //on a keypress matching the first letter of a colour, displays the relevant information.
     @FXML
     private void handleKeyPress(KeyEvent event)
     {
@@ -97,7 +100,7 @@ public class FXMLDocumentController implements Initializable {
                 }
 
     }
-    
+    //connects via socket to the server program, and reads in JSON formatted text.
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         String input = "";

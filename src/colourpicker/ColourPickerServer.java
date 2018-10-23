@@ -11,11 +11,15 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.FileInputStream;
 import org.json.JSONObject;
-
+/**
+ * Reads JSON from an external file, and then waits for communication from a Client program to send JSON to.
+ * @author J380446
+ */
 public class ColourPickerServer {
     
     static String filename = "colors.ser";
     
+    //reads JSON formatted text from a .ser file, and awaits communications with a client server.
     public static void main(String[] args)
     {
         JSONObject[] listColor = new JSONObject[4];
