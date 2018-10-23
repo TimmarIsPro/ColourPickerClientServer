@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane"  prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="colourpicker.FXMLDocumentController" onKeyPressed="#handleKeyPress">
+    <children>
+        <Pane id="colorView"  fx:id="colorDisplay" layoutX="14.0" layoutY="18.0" prefHeight="165.0" prefWidth="159.0">
+            <children>
+                <Rectangle id="colorRectangle" fx:id="colorDisp" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="75.0" layoutX="1.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="159.0" />
+                <Label id="colorRGBA" fx:id="colorRGBA" alignment="CENTER" layoutX="37.0" layoutY="74.0" prefHeight="17.0" prefWidth="85.0" text="RGBA" />
+                <Label id="colorHex" fx:id="colorHex" alignment="CENTER" layoutX="52.0" layoutY="49.0" prefHeight="17.0" prefWidth="55.0" text="Hex" />
+                <Label id="colorName" fx:id="colorName" alignment="CENTER" layoutX="64.0" layoutY="21.0" text="Name" />
+            </children>
+        </Pane>
+        <Button id="btnDisplay" fx:id="displayButton" layoutX="206.0" layoutY="149.0" mnemonicParsing="false" onAction="#displayColor" text="Display" />
+     
+        <ListView id="colorList" fx:id="colorList" layoutX="194.0" layoutY="12.0" prefHeight="134.0" prefWidth="133.0" onMouseClicked="#handleMouseClick" />
+    </children>
+</AnchorPane>
